@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Form</title>
-  <style>
-    /* Add your CSS styles here */
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <title>Calendar Widget</title>
 </head>
-
 <body>
-  <form>
-    <div class="nativeDatePicker">
-      <label for="bday">Enter your birthday:</label>
-      <input type="date" id="bday" name="bday" />
-      <span class="validity"></span>
-    </div>
-    <p class="fallbackLabel">Enter your birthday:</p>
-    <div class="fallbackDatePicker">
-      <span>
-        <label for="day">Day:</label>
-        <select id="day" name="day"></select>
-      </span>
-      <span>
-        <label for="month">Month:</label>
-        <select id="month" name="month">
-          <option selected>January</option>
-          <option>February</option>
-          <option>March</option>
-          <option>April</option>
-          <option>May</option>
-          <option>June</option>
-          <option>July</option>
-          <option>August</option>
-          <option>September</option>
-          <option>October</option>
-          <option>November</option>
-          <option>December</option>
-        </select>
-      </span>
-      <span>
-        <label for="year">Year:</label>
-        <select id="year" name="year"></select>
-      </span>
-    </div>
-  </form>
-</body>
+  <header>
+    <h1>Panda Coding Express</h1>
+    <center> <!-- FIX LATER -->
+    <img class="team-logo" src="team-logo.png" alt="Team logo of a panda">
+  </center>
 
+  </header>
+
+  <section class="calendar-widget">
+    <div class="calendar">
+      <h3 class="month">April 2024</h3>
+      <ul class="weekdays">
+        <li>Mo</li>
+        <li>Tu</li>
+        <li>We</li>
+        <li>Th</li>
+        <li>Fr</li>
+        <li>Sa</li>
+        <li>Su</li>
+      </ul>
+
+      <ul class="days">
+        <li>&nbsp&nbsp1</li> <!-- can optimize with JavaScript to dynamically update days-->
+        <li>&nbsp&nbsp2</li>
+        <li>&nbsp&nbsp3</li>
+        <li>&nbsp&nbsp4</li>
+        <li>&nbsp&nbsp5</li>
+        <li>&nbsp&nbsp6</li>
+        <li>&nbsp&nbsp7</li>
+      </ul>
+      <ul class="days">
+        <li>&nbsp&nbsp8</li>
+        <li>&nbsp&nbsp9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+      </ul>
+      <ul class="days">
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+      </ul>
+      <ul class="days">
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+      </ul>
+      <ul class="days">
+        <li>29</li>
+        <li>30</li>
+      </ul>
+    </div>
+
+    <div class="task-list">
+      <!-- <h3 class="tast-title">Today's Tasks</h3> -->
+    </div>
+  </section>
+
+  <footer>
+
+  </footer>
+</body>
 </html>
