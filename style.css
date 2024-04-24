@@ -42,3 +42,15 @@ img {
 .month {
     padding-left: 8%;
 }
+
+.task-box{
+    width: 350px;
+    height: 200px;
+    border: 1px solid;
+}
+
+.task-list{
+    padding-left: 140%;
+    padding-right: 200%;
+    margin-top: -365px;
+}
