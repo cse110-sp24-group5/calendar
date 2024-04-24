@@ -1,5 +1,7 @@
 {
-    "scripts": {
-        "lint": "npx htmlhint ./*.html"
-    }
+  "scripts": {
+    "lint": "npm run lint:html && npm run lint:css",
+    "lint:html": "npx htmlhint ./*.html",
+    "lint:css": "npx stylelint ./*.css"
+  }
 }
