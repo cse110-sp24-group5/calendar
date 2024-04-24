@@ -1,5 +1,24 @@
+/* background color to match our theme */
+* {
+    background-color: #F2E4FB;
+    
+
+}
+
+/* centers team logo, I think? */
+.team-logo{
+    margin: auto;
+}
+
 h1 {
     text-align: center;
+
+    /* font not working, will come back later */
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color: #3C62D5;
 }
 
 img {
@@ -53,4 +72,9 @@ img {
     padding-left: 140%;
     padding-right: 200%;
     margin-top: -365px;
+}
+
+/* changes the width of the "Today's tasks" so that it spans the entire box */
+.task-title{
+    width: 200px;
 }
