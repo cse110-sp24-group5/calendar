@@ -1,4 +1,15 @@
+@media screen and (max-width: 750px){
+    .team-logo {
+        margin-bottom: -30px;
+    }
+    .month {
+        text-align: center;
+        width: 200px;
+    }
 
+    
+
+}
 
 /* background color to match our theme */
 * {
@@ -7,7 +18,11 @@
 
 /* centers team logo, I think? */
 .team-logo{
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+
+    text-align: center;
 }
 
 .jersey-15-regular {
@@ -19,17 +34,22 @@
 h1 {
     text-align: center;
 
-    /* font not working, will come back later */
-    /* edited */
+    /* font for title */
     font-family: 'Jersey 15', sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 50px;
+    
     color: #3C62D5;
+    
+    margin-bottom: -4px; /* brought the img closer to the title */
 }
 
 img {
     width: 300px;
     height: 300px;
+
+    margin-bottom: -5px;
 }
 
 .month {
@@ -42,6 +62,7 @@ img {
     display: inline-grid;
     grid-auto-flow: column;
     column-gap: 13px;
+
 }
 
 .weekdays li {
@@ -53,15 +74,21 @@ img {
     display: inline-grid;
     grid-auto-flow: column;
     column-gap: 15px;
+
+    margin-bottom: 15px; /* leaves a little more space at the bottom of the screen */
 }
 
 .days li {
     display: inline-grid;
 }
+.days li:hover{ /* every time you hover over a date in the calendar, it will change color */
+    color: #6E8BEB;
+}
 
 .calendar-widget {
     padding-left: 25%;
     padding-right: 55%;
+
 }
 
 .month {
@@ -71,7 +98,9 @@ img {
 .task-box{
     width: 350px;
     height: 200px;
-    border: 1px solid;
+    border: 2px solid;
+
+    margin-top: -20px;
 }
 
 .task-list{
@@ -80,7 +109,30 @@ img {
     margin-top: -365px;
 }
 
-/* changes the width of the Today's tasks so that it spans the entire box */
+/* changed the width of the Today's tasks so that it spans the entire box */
 .task-title{
-    width: 200px;
+    width: 342px;
+
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 8px;
+
+    border-bottom: 1px black solid;
+    border-top: 2px black solid;
+    border-right: 2px black solid;
+    border-left: 2px black solid;
+
+    background-color: #f6f0fc;
+}
+
+/* changed the background color of the task box */
+.task-box ul, .task-box li {
+    background-color: #dbeafe; 
+}
+.task-box{
+   background-color: #dbeafe; 
+}
+
+.calendar {
+    font-size: 20px;
 }
