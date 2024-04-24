@@ -14,7 +14,7 @@
     font-family: "Jersey 15", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
 h1 {
     text-align: center;
@@ -80,7 +80,7 @@ img {
     margin-top: -365px;
 }
 
-/* changes the width of the "Today's tasks" so that it spans the entire box */
+/* changes the width of the Today's tasks so that it spans the entire box */
 .task-title{
     width: 200px;
 }
