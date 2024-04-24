@@ -1,5 +1,9 @@
 {
     "scripts": {
         "lint": "npx htmlhint ./*.html"
+    },
+    "devDependencies": {
+        "stylelint": "^16.4.0",
+        "stylelint-config-standard-scss": "^13.1.0"
     }
 }
