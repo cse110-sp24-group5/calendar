@@ -1,6 +1,13 @@
-@media screen and (max-width: 750px) {
-    .team-logo {
-        margin-bottom: -30px;
+/* responsiveness for phones and smaller tablets */
+@media screen and (max-width: 750px) and (min-height: 610px){
+    .calendar-widget {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex-basis: auto;
+
+        justify-content: center;
+        align-items: center;
     }
     
 }
@@ -20,11 +27,9 @@ body {
 
 /* centers team logo, I think? */
 .team-logo{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -50px;
-
     text-align: center;
+    width: 42vw;
+    height: 42vw;
 }
 
 /* fonts for calendar */
@@ -50,8 +55,6 @@ h1 {
     font-size: 50px;
 
     color: #3C62D5;
-    
-    margin-bottom: -4px; /* brought the img closer to the title */
 }
 
 h2{
@@ -68,14 +71,14 @@ img {
 }
 
 .calendar {
-    
     width: 33vw;
     text-align: center;
+
 }
 
 .month {
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
     color: var(--color1);
 }
 
@@ -142,13 +145,19 @@ img {
 }
 
 .calendar-widget {
-    padding-left: 17%;
-    padding-right: 55%;
+/*
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    flex-wrap: nowrap;
+    column-gap: 10vw;
+*/
 
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .task-box{
-    width: 350px;
     height: 200px;
     border: 2px solid;
     border-left: 2px #abb2f2 solid;
@@ -156,24 +165,27 @@ img {
     border-top: 2px #7d91ce solid;
     border-bottom: 3px #132865 solid;
 
-    margin-top: -20px;
+    width: 32vw;
+
 }
 
 .task-list{
-    
+
     font-family: "Kode Mono", monospace;
-    font-size: small;
     color:#0c2366;
-    padding-left: 140%;
-    padding-right: 200%;
-    margin-top: -365px;
+    font-size: 1.5vw;
+    
+
+    margin-top: 10%;
+   
 }
 
 /* changed the width of the Today's tasks so that it spans the entire box */
 .task-title{
     width: 342px;
+    width: 31.4vw;
     text-align: center;
-    font-size: 20px;
+    font-size: 2vw;
     font-family: "Jersey 15", sans-serif;
     color: #3C62D5;
     
@@ -189,6 +201,8 @@ img {
 
 
     background-color: #f6f0fc;
+
+    margin: 0;
 }
 
 /* changed the background color of the task box */
