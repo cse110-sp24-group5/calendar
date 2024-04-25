@@ -1,18 +1,20 @@
-@media screen and (max-width: 750px){
+@media screen and (max-width: 750px) {
     .team-logo {
         margin-bottom: -30px;
     }
-    .month {
-        text-align: center;
-        width: 200px;
-    }
-
     
+}
 
+:root {
+    --color1: #3C62D5;
+    --color2: #6E8BEB;
+    --color3: rgb(176, 93, 176);
+    --color4: rgb(232, 194, 249);
+    --color5: #F2E4FB;
 }
 
 /* background color to match our theme */
-* {
+body {
     background-color: #F2E4FB;
 }
 
@@ -59,47 +61,78 @@ img {
     margin-bottom: -5px;
 }
 
+.calendar {
+    width: 33vw;
+    text-align: center;
+}
+
 .month {
     text-align: center;
-    padding-right: 10%;
+    font-size: 2vw;
+    color: var(--color1);
 }
 
 .weekdays {
     list-style-type: none; /* remove bullets */
     display: inline-grid;
     grid-auto-flow: column;
-    column-gap: 13px;
-
+    column-gap: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 0;
+    margin: 0;
+    background-color: var(--color3);
+    border: solid var(--color1);
+    color: var(--color5);
+    font-size: 1.7vw;
 }
 
 .weekdays li {
     display: inline-block;
+    border: 0.5vw solid transparent;
+    width: 2vw;
 }
 
 .days {
     list-style-type: none; /* remove bullets */
     display: inline-grid;
     grid-auto-flow: column;
-    column-gap: 15px;
+    column-gap: 2vw;
+    background-color: var(--color2);
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 0;
+    margin: 0;
+    border-left: solid var(--color1);
+    border-right: solid var(--color1);
+    color: var(--color5);
+    font-size: 1.7vw;
+}
 
-    margin-bottom: 15px; /* leaves a little more space at the bottom of the screen */
+/*adds border to bottom of calendar*/
+.days:last-of-type {
+    border-bottom: solid var(--color1);
 }
 
 .days li {
     display: inline-grid;
+    border: 0.5vw solid transparent;
+    width: 2vw;
 }
-.days li:hover{ /* every time you hover over a date in the calendar, it will change color */
-    color: #6E8BEB;
+
+/*select a date and it's highlighted*/
+.days li:focus {
+    background-color: var(--color1);
+    border-style: solid;
+    border-color: var(--color1);
+    border-width: 0.5vw;
+    border-radius: 10000px;
 }
 
 .calendar-widget {
-    padding-left: 25%;
+    padding-left: 17%;
     padding-right: 55%;
 
-}
-
-.month {
-    padding-left: 8%;
 }
 
 .task-box{
@@ -144,8 +177,4 @@ img {
 }
 .task-box{
    background-color: #dbeafe; 
-}
-
-.calendar {
-    font-size: 20px;
 }
