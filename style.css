@@ -1,16 +1,59 @@
-/* responsiveness for phones and smaller tablets */
-@media screen and (max-width: 750px) and (min-height: 610px){
-    .calendar-widget {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        flex-basis: auto;
+.parent {
+    display: flex;
+    flex-wrap: wrap; /* Will allow items to wrap when needed */
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from center to start for better alignment */
+    margin: 30px;
+  }
+  
+  .child {
+    /* Removed align-items because it does not apply to flex items */
+    flex: 1 1 50%;
+    max-width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  @media all and (max-width: 800px ){
+    
+  }
+  @media (max-width: 768px) {
+    .parent {
+      flex-direction: column; /* This will stack children vertically on small screens */
+    }
+  
+    .child {
+      flex-basis: 100%;
+      max-width: 100%; /* Each block takes the full width of the container */
+      
+    }
+  
+    .team-logo {
+      margin-bottom: 0; /* Adjusted to align properly */
+    }
 
-        justify-content: center;
-        align-items: center;
+    .calendar-widget, .task-list {
+    /* Remove the padding that was pushing elements out */
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.calendar, .task-list {
+    width: 100%; /* Make sure they take up full width on small screens */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+  }
+}  
+
+
+
+@media screen and (max-width: 750px) {
+    .team-logo {
+        margin-bottom: -30px;
     }
     
 }
+
 
 :root {
     --color1: #3C62D5;
@@ -27,9 +70,11 @@ body {
 
 /* centers team logo, I think? */
 .team-logo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+
     text-align: center;
-    width: 42vw;
-    height: 42vw;
 }
 
 /* fonts for calendar */
@@ -55,6 +100,8 @@ h1 {
     font-size: 50px;
 
     color: #3C62D5;
+    
+    margin-bottom: -4px; /* brought the img closer to the title */
 }
 
 h2{
@@ -71,14 +118,16 @@ img {
 }
 
 .calendar {
-    width: 33vw;
+    min-width: 50px;
+    max-width: 60px;
+    width: 100%;
     text-align: center;
-
 }
 
 .month {
     text-align: center;
-    font-size: 3vw;
+    align-self: center;
+    font-size: 20px;
     color: var(--color1);
 }
 
@@ -86,23 +135,23 @@ img {
     list-style-type: none; /* remove bullets */
     display: inline-grid;
     grid-auto-flow: column;
-    column-gap: 2vw;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    padding-left: 0;
+    column-gap: 2rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-left: 0.1rem;
+    padding-right: 0.3rem;
     margin: 0;
     background-color: var(--color3);
     border: solid var(--color1);
     color: var(--color5);
 
-    font-size: 1.7vw;
+    font-size: 1rem;
 }
 
 .weekdays li {
     display: inline-block;
-    border: 0.5vw solid transparent;
-    width: 2vw;
-
+    border: 0.4rem solid transparent;
+    width: 0.9rem;
     font-family: "Jersey 15", sans-serif;
 }
 
@@ -110,17 +159,17 @@ img {
     list-style-type: none; /* remove bullets */
     display: inline-grid;
     grid-auto-flow: column;
-    column-gap: 2vw;
+    column-gap: 2rem;
     background-color: var(--color2);
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     padding-left: 0;
     margin: 0;
     border-left: solid var(--color1);
     border-right: solid var(--color1);
     color: var(--color5);
 
-    font-size: 1.7vw;
+    font-size: 1rem;
     font-family: "Jersey 15", sans-serif;
 }
 
@@ -131,8 +180,8 @@ img {
 
 .days li {
     display: inline-grid;
-    border: 0.5vw solid transparent;
-    width: 2vw;
+    border: 0.5rem solid transparent;
+    width: 0.7rem;
 }
 
 /*select a date and it's highlighted*/
@@ -140,52 +189,42 @@ img {
     background-color: var(--color1);
     border-style: solid;
     border-color: var(--color1);
-    border-width: 0.5vw;
+    border-width: 0.5rem;
     border-radius: 10000px;
 }
 
 .calendar-widget {
-/*
-    display: flex;
-    flex-direction: row;
-    flex-basis: auto;
-    flex-wrap: nowrap;
-    column-gap: 10vw;
-*/
+    padding-left: 5%;
 
-    padding-left: 10vw;
-    padding-right: 10vw;
 }
 
 .task-box{
-    height: 200px;
+    min-width: 50px;
+    width: 380px;
+    height: 230px;
     border: 2px solid;
     border-left: 2px #abb2f2 solid;
     border-right: 3px #132865 solid;
     border-top: 2px #7d91ce solid;
     border-bottom: 3px #132865 solid;
 
-    width: 32vw;
-
+    margin-top: -20px;
+    
 }
 
 .task-list{
-
+    margin-top: 3rem;
     font-family: "Kode Mono", monospace;
+    font-size: small;
     color:#0c2366;
-    font-size: 1.5vw;
-    
-
-    margin-top: 10%;
-   
+    align-self: center;
 }
 
 /* changed the width of the Today's tasks so that it spans the entire box */
 .task-title{
-    width: 342px;
-    width: 31.4vw;
+    width: 372px;
     text-align: center;
-    font-size: 2vw;
+    font-size: 20px;
     font-family: "Jersey 15", sans-serif;
     color: #3C62D5;
     
@@ -201,8 +240,6 @@ img {
 
 
     background-color: #f6f0fc;
-
-    margin: 0;
 }
 
 /* changed the background color of the task box */
@@ -210,5 +247,6 @@ img {
     background-color: #dbeafe; 
 }
 .task-box{
+
    background-color: #dbeafe; 
 }
