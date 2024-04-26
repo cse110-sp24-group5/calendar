@@ -105,16 +105,18 @@
     
     <!--This is the beginning of our task list-->
     <div class="task-list child">
+      <!--Input for new task-->
+      <div class="add-task-container">
+        <input type="text" id="newTaskInput" placeholder="Enter new task here">
+        <button id="addTaskButton">Add</button>
+      </div>
       <!--Title for this particular section-->
       <h3 class="task-title">Today's Tasks</h3>
-
       <!--Tasks listed out-->
         <div class="task-box">
-          <ul>
-          <li><input type="checkbox"> Task1 </li>
-          <li><input type="checkbox"> Task2 </li>
+          <ul class="task-list-ul">
+            <!--Tasks will added here using JS!-->
           </ul>
-
         </div>
       </div>
   </section>
@@ -122,5 +124,7 @@
   <footer>
 
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
