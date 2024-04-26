@@ -62,7 +62,7 @@ The main purpose of this calendar application is to boost productivity. It provi
 Users can easily track their tasks by clicking on a specific day by clicking on it, this will then  display a list of tasks scheduled for that particular date. This feature ensures that users can stay organized and never miss an important event or deadline.
 
 ## Features
-![display.png](banner.png)
+![display.png](display.png)
 
 #### 1. Calendar View
 The application offers a clean calendar view, making it easy for users to navigate their schedules. The calendar is displayed prominently, with the current month (April's) dates clearly visible.
