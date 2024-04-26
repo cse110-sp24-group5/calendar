@@ -222,3 +222,27 @@ img {
     border-left: 2px #abb2f2 solid;
     background-color: #f6f0fc;
 }
+
+.add-task-container input[type="text"] {
+    border-left: 2px solid #abb2f2;
+    border-right: 3px solid #132865;
+    border-top: 2px solid #7d91ce;
+    border-bottom: 3px solid #132865;
+    margin-top: -30px;
+    background-color: #dbeafe;
+    padding: 10px;
+    outline: none;
+}
+
+.add-task-container button {
+    background-color: var(--color1);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-task-container button:hover {
+    background-color: var(--color3);
+}
