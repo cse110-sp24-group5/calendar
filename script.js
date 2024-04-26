@@ -43,10 +43,8 @@ function createTodoListItem(todo, date) {
     // Add a class to the delete button so that it can be styled (credit to ChatGPT)
     button.classList.add("deleteButton");
 
+    // Styling for elements not in the html file
     button.textContent = "Remove";
-    button.style.backgroundColor = "#eb6e8b";
-    button.style.color = "white";
-    button.style.fontWeight = "bold";
     hrline.style.width = "80%";
     hrline.style.borderColor = "white";
 
