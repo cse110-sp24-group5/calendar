@@ -28,19 +28,20 @@
 
 ## Table of Contents
 
-- [**Contributors**](#team-members)
-
-- [**Github Pages Link**](#github-pages-link)
-
-- [**Purpose**](#purpose)
-
-- [**Features**](#features)
-
-- [**Linting**](#linting)
-  
-- [**SWOT Analysis**](#swot-analysis)
-
-- [**Our Learnings**](#our-learnings)
+- [Table of Contents](#table-of-contents)
+- [Team Members](#team-members)
+- [Github Pages Link](#github-pages-link)
+- [Purpose](#purpose)
+- [Features](#features)
+    - [1. Calendar View](#1-calendar-view)
+    - [2. Selecting a Date](#2-selecting-a-date)
+    - [3. Adding Tasks](#3-adding-tasks)
+    - [4. Removing Tasks](#4-removing-tasks)
+    - [5. Data Storage](#5-data-storage)
+    - [6. Duplicate Task Detection](#6-duplicate-task-detection)
+- [Linting](#linting)
+- [SWOT Analysis](#swot-analysis)
+- [Our Learnings](#our-learnings)
 
 ## Team Members
 + Drishti Regmi
@@ -62,7 +63,7 @@ If you would like to see a demo of this, you can checkout the video [here](https
 ## Purpose
 The main purpose of this calendar application is to boost productivity. It provides users with a convenient and user-friendly way to visualize the days of the month, with a focus on the month of April in 2024. This application aims to simplify the task of keeping track of daily events, appointments, and reminders by offering a comprehensive calendar view.
 
-Users can easily track their tasks by clicking on a specific day by clicking on it, this will then  display a list of tasks scheduled for that particular date. This feature ensures that users can stay organized and never miss an important event or deadline.
+Users can easily track their tasks by clicking on a specific day, this will then display a list of tasks scheduled for that particular date. This feature ensures that users can stay organized and never miss an important event or deadline.
 
 ## Features
 ![display.png](display.png)
@@ -117,14 +118,14 @@ To run only the Javascript lint: `npm run lint:js`
 
 | Weakness | Details |
 | --- | --- |
-| **Lack of Widget features** | - Widget only has the days of April listed, not a year-long calendar yet <br> - No current date tracker |
+| **Lack of Widget features** | - Widget only has the days of April listed, not a year-long calendar yet |
 | **Scheduling Meetings** | - The team as a whole did not have many opportunities to have meetings in person to communicate the progress made so far |
 
 **Opportunities:**
 
 | Opportunity | Details |
 | --- | --- |
-| **Additional Features** | - Adding all the months to the calendar along with a toggle bar to change the months <br> - Making the Task List more customizable <br> - Allow people to schedule events on the calendar (start and end time) instead of just adding todos <br> - Recurring events on the calendar |
+| **Additional Features** | - Adding all the months to the calendar along with a toggle bar to change the months <br> - Making the Task List more customizable <br> - Allow people to schedule events on the calendar (start and end time) instead of just adding todos <br> - Recurring events on the calendar <br> - Allow users to import and export their calander data <br> - More alternate color schemes (like dark mode, ect.) <br> - Add a current date tracker (different from selected day) |
 | **Real Implication** | - We got to use HTML, CSS and JS to build a useful application |
 
 **Threats:**
