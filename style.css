@@ -12,8 +12,9 @@
     box-sizing: border-box;
     padding: 20px;
   }
+  
 
-  @media (width <= 768px) {
+  @media screen and (max-width: 750px) {
     .parent {
       flex-direction: column; /* This will stack children vertically on small screens */
     }
@@ -38,12 +39,6 @@
 
 }  
 
-@media screen and (width <= 750px) {
-    .team-logo {
-        margin-bottom: -30px;
-    }
-    
-}
 
 :root {
     --color1: #3C62D5;
@@ -81,8 +76,6 @@ body {
 
 h1 {
     text-align: center;
-
-    /* font for title */
     font-family: 'Jersey 10 Charted', sans-serif;
     font-weight: 400;
     font-style:italic;
@@ -172,6 +165,7 @@ img {
     background-color: #dbeafe; 
 }
 
+
 /* select a date and it's highlighted */
 .days li.focused {
     background-color: var(--color1);
@@ -198,7 +192,6 @@ img {
     margin-top: -20px;
     background-color: #dbeafe; 
     
-    
 }
 
 .task-list{
@@ -207,7 +200,8 @@ img {
     font-style: oblique;
     color:#0c2366;
     align-self: center;
-    padding-top: 8.9%;
+    align-items: center;
+    padding-top: 6%;
     margin-left: 0%;
 }
 
@@ -229,41 +223,3 @@ img {
     background-color: #f6f0fc;
 }
 
-/* Style for the add button */
-#addTaskButton {
-    background-color: #4CAF50; 
-    border-style: ridge;
-    color: white; 
-    padding: 3px 9px; 
-    text-align: center; 
-    display: inline-block; 
-    font-size: 12px; 
-    margin-top: 10px; 
-    cursor: pointer; 
-    border-radius: 5px; 
-}
-
-/* Hover effect */
-#addTaskButton:hover {
-    background-color: #45a049; 
-}
-
-/* Position in the box */
-.add-task-container {
-    margin-top: 100px;
-    margin-left: 60px;
-}
-
-/*credit of ChatGPT*/
-.deleteButton {
-    background-color: red;
-    color: white;
-    padding: 8px 12 px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.deleteButton:hover {
-    background-color: rgb(119, 17, 17);
-}
