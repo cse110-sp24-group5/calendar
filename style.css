@@ -13,10 +13,8 @@
     padding: 20px;
   }
   
-  @media all and (max-width: 800px ){
-    
-  }
-  @media (max-width: 768px) {
+
+  @media (max-width: 820px) {
     .parent {
       flex-direction: column; /* This will stack children vertically on small screens */
     }
@@ -41,12 +39,6 @@
 
 }  
 
-@media screen and (max-width: 750px) {
-    .team-logo {
-        margin-bottom: -30px;
-    }
-    
-}
 
 :root {
     --color1: #3C62D5;
