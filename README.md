@@ -134,6 +134,7 @@ To run only the Javascript lint: `npm run lint:js`
 | Threat | Details |
 | --- | --- |
 | **Deadlines** | - Tight turnaround time for all teams to complete their respective subtasks |
+| **Learning** | -We had a little time to learn how to use JavaScript, a new language for some |
 
 ## Our Learnings
 
