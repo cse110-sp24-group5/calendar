@@ -247,3 +247,9 @@ img {
 #addTaskButton:hover {
     background-color: #45a049; 
 }
+
+/* Position in the box */
+.add-task-container {
+    margin-top: 100px;
+    margin-left: 60px;
+}
