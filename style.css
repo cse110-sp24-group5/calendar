@@ -183,13 +183,13 @@ img {
 .task-box{
     min-width: 50px;
     width: 380px;
-    height: 230px;
+    height: 220px;
     border: 2px solid;
     border-left: 2px #abb2f2 solid;
     border-right: 3px #132865 solid;
     border-top: 2px #7d91ce solid;
     border-bottom: 3px #132865 solid;
-    margin-top: -20px;
+    margin-top: -30px;
     background-color: #dbeafe; 
     
 }
@@ -222,4 +222,3 @@ img {
     border-left: 2px #abb2f2 solid;
     background-color: #f6f0fc;
 }
-
