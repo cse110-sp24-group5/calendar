@@ -82,6 +82,8 @@ In order to keep everything up-to-date. Users can simply locate the task they wi
 #### 5. Duplicate Task Detection
 To prevent accidental duplication of tasks, the application includes a helpful feature. If a user attempts to add the same task more than once, a pop-up notification will appear, alerting them to the potential duplicate entry.
 
+![duplicate-task.png](duplicate-task.png)
+
 ## Linting
 Linting has been set up for HTML.
 
