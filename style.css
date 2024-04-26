@@ -228,3 +228,22 @@ img {
     border-left: 2px #abb2f2 solid;
     background-color: #f6f0fc;
 }
+
+/* Style for the add button */
+#addTaskButton {
+    background-color: #4CAF50; 
+    border-style: ridge;
+    color: white; 
+    padding: 10px 20px; 
+    text-align: center; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin-top: 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+  
+/* Hover effect */
+#addTaskButton:hover {
+    background-color: #45a049; 
+}
