@@ -93,8 +93,14 @@ Linting is a crucial practice that helps ensure code quality, consistency, and m
 We have implemented automated linting checks performed on every push or pull request to make sure potential issues are caught early in the development process, and make sure that our coding standard is met. When you push changes, on GitHub you will be able to see a tick or cross next to it based on whether it passes that check. You can click on the same to view details. Along with this you can also run the linter locally.
 
 To run all of them: `npm run lint`
+
+
 To run only the HTML lint: `npm run lint:html`
+
+
 To run only the CSS lint: `npm run lint:css`
+
+
 To run only the Javascript lint: `npm run lint:js`
 
 
