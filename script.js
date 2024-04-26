@@ -32,6 +32,7 @@ function createTodoListItem(todo, date) {
     const listItem = document.createElement("li");
     const checkbox = document.createElement("input");
     const button = document.createElement("button");
+    const hrline = document.createElement("hr");
     checkbox.type = "checkbox";
     checkbox.checked = todo.done;
 
@@ -41,6 +42,13 @@ function createTodoListItem(todo, date) {
 
     // Add a class to the delete button so that it can be styled (credit to ChatGPT)
     button.classList.add("deleteButton");
+
+    button.textContent = "Remove";
+    button.style.backgroundColor = "#eb6e8b";
+    button.style.color = "white";
+    button.style.fontWeight = "bold";
+    hrline.style.width = "80%";
+    hrline.style.borderColor = "white";
 
     // Add event listener to checkbox
     checkbox.addEventListener("change", function() {
@@ -88,70 +96,41 @@ function createTodoListItem(todo, date) {
     listItem.appendChild(checkbox);
     listItem.appendChild(document.createTextNode(todo.title));
     listItem.appendChild(button);
+    listItem.appendChild(hrline);
     const taskList = document.querySelector(".task-list ul");
     taskList.appendChild(listItem);
 }
 
 // Function to handle click event on a day
-function handleDayClick(day) {
-    // Remove focus from previously selected date, if any
-    const previouslySelectedDay = document.querySelector('.days li.focused');
-    if (previouslySelectedDay) {
-        previouslySelectedDay.classList.remove('focused');
-    }
-    // Add focused class to the clicked date
-    this.classList.add('focused');
+function handleDayClick(event) {
+    if (event.type === "click" || (event.type === "keydown" && event.key === "Enter")) {
+        // Remove focus from previously selected date, if any
+        const previouslySelectedDay = document.querySelector('.days li.focused');
+        if (previouslySelectedDay) {
+            previouslySelectedDay.classList.remove('focused');
+        }
+        // Add focused class to the clicked date
+        this.classList.add('focused');
 
-    const date = `2024-04-${this.innerText.trim()}`;
+        const date = `2024-04-${this.innerText.trim()}`;
 
-    selectedDate = date;
-  
-    // Retrieve todos for date from localStorage
-    const todos = getTodosForDate(date);
-  
-    const taskList = document.querySelector(".task-list ul"); // Select the task list element
-    taskList.innerHTML = ""; // Clear taskList before populating it
+        selectedDate = date;
     
-    if (todos) todos.forEach(todo => createTodoListItem(todo, date)); // add HTML to the element
+        // Retrieve todos for date from localStorage
+        const todos = getTodosForDate(date);
+    
+        const taskList = document.querySelector(".task-list ul"); // Select the task list element
+        taskList.innerHTML = ""; // Clear taskList before populating it
+        
+        if (todos) todos.forEach(todo => createTodoListItem(todo, date)); // add HTML to the element
+    }
 }
-  
+    
 // Function to add event listener to each day
 function addEventListenerToDay(day) {
     day.addEventListener("click", handleDayClick); // day is a list item
+    day.addEventListener("keydown", handleDayClick); // so we can tab+enter dates
 }
-
-// Function to handle click event on the "Add Task" button
-function handleAddTaskButtonClick() {
-    // Get the selected day
-    const selectedDay = document.querySelector(".selected-day");
-    
-    // Check if a day is selected
-    if (!selectedDay) {
-        console.error("No day selected.");
-        return;
-    }
-    
-    // Get the date of the selected day
-    const date = selectedDay.innerText.trim();
-
-    // Get the task input value
-    const taskInput = document.querySelector("#newTaskInput").value.trim();
-
-    // Print the input and the corresponding day
-    console.log("Task:", taskInput);
-    console.log("Day:", date);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Selecting all days, which are list items
-    const days = document.querySelectorAll(".days li");
-    // Adding event listener to each day
-    days.forEach(day => addEventListenerToDay(day));
-    
-    const addTaskButton = document.querySelector("#addTaskButton");
-    addTaskButton.addEventListener("click", handleAddTaskButtonClick);
-
-});
 
 // Function to handle click event on the "Add Task" button or Enter key press
 function handleAddTask(event) {
@@ -178,6 +157,15 @@ function handleAddTask(event) {
         // If there are no todos for the selected day, initialize an empty array
         if (!todos[selectedDate]) {
             todos[selectedDate] = [];
+        }
+
+        // Check if the task input matches any existing task title for the selected date
+        // Array.some() is similar to iterating the array but it stops when the argument is true
+        const taskExists = todos[selectedDate].some(todo => todo.title === taskInput);
+
+        if (taskExists) {
+            alert("Task already exists for this date.");
+            return;
         }
 
         // Add the new task to the todos for the selected date
