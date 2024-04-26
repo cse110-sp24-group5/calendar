@@ -26,19 +26,18 @@
   </a>
 </p>
 
+## Table of Contents
 
-## Github Pages Link
-https://cse110-sp24-group5.github.io/calendar/
+- [**Contributors**](#contributors)
 
-## Purpose
-This calendar is used to display the days of the month (April) while keeping track of the tasks the user has listed on any given day of the month
+- [**Github Pages Link**](#github-pages-link)
 
-## How to Access Software
-To access the calendar,go to the following Github Pages Link : **Insert link here**
+- [**Purpose**](#purpose)
 
-## Features
-+ Users are able to click on dates to see tasks scheduled for that day
-+ Users should also be able to add and remove tasks
+- [**Linting**](#linting)
+- [**Future Improvements**](#future-improvements)
+  
+- [**SWOT Analysis**](#swot-analysis)
 
 ## Contributers
 + Drishti Regmi
@@ -51,6 +50,21 @@ To access the calendar,go to the following Github Pages Link : **Insert link her
 + Maasilan Kumaraguru
 + Arnav Modi (Team Lead)
 + Mishka Jethwani (Team Lead)
+
+## Github Pages Link
+https://cse110-sp24-group5.github.io/calendar/
+
+
+## Purpose
+This calendar is used to display the days of the month (April) while keeping track of the tasks the user has listed on any given day of the month
+
+## How to Access Software
+To access the calendar,go to the following Github Pages Link : **Insert link here**
+
+## Features
++ Users are able to click on dates to see tasks scheduled for that day
++ Users should also be able to add and remove tasks
+
 
 ## Linting
 Linting has been set up for HTML.
