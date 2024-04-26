@@ -126,46 +126,48 @@ document.addEventListener("DOMContentLoaded", function() {
     saveTodosToStorage(sampleTodos);
 });
 
-// Function to handle click event on the "Add Task" button
-function handleAddTaskButtonClick() {
-    // Check if a day is selected
-    if (!selectedDate) {
-        alert("No date selected")
-        return;
+// Function to handle click event on the "Add Task" button or Enter key press
+function handleAddTask(event) {
+    // Check if the event is a click on the button or the Enter key press
+    if (event.type === "click" || (event.type === "keydown" && event.key === "Enter")) {
+        // Check if a day is selected
+        if (!selectedDate) {
+            alert("No date selected");
+            return;
+        }
+        
+        // Get the task input value
+        const taskInput = document.querySelector("#newTaskInput").value.trim();
+
+        // Check if task input is empty
+        if (!taskInput) {
+            alert("Task input is empty.");
+            return;
+        }
+
+        // Retrieve existing todos from localStorage
+        let todos = loadTodosFromStorage();
+
+        // If there are no todos for the selected day, initialize an empty array
+        if (!todos[selectedDate]) {
+            todos[selectedDate] = [];
+        }
+
+        // Add the new task to the todos for the selected date
+        todos[selectedDate].push({ title: taskInput, done: false });
+
+        // Save updated todos to localStorage
+        saveTodosToStorage(todos);
+
+        // Clear the task input field
+        document.querySelector("#newTaskInput").value = "";
+
+        // Update the task list
+        const taskList = document.querySelector(".task-list ul");
+        taskList.innerHTML = ""; // Clear taskList before repopulating it
+        todos[selectedDate].forEach(todo => createTodoListItem(todo, selectedDate));
     }
-    
-    // Get the task input value
-    const taskInput = document.querySelector("#newTaskInput").value.trim();
-
-    // Check if task input is empty
-    if (!taskInput) {
-        alert("Task input is empty.");
-        return;
-    }
-
-    // Retrieve existing todos from localStorage
-    let todos = loadTodosFromStorage();
-
-    // If there are no todos for the selcted day, initialize empty array
-    if (!todos[selectedDate]) {
-        todos[selectedDate] = [];
-    }
-
-    // Add the new task to the todos for the selected date
-    todos[selectedDate].push({ title: taskInput, done: false });
-
-    // Save updated todos to localStorage
-    saveTodosToStorage(todos);
-
-    // Clear the task input field
-    document.querySelector("#newTaskInput").value = "";
-
-    // Update the task list
-    const taskList = document.querySelector(".task-list ul");
-    taskList.innerHTML = ""; // Clear taskList before repopulating it
-    todos[selectedDate].forEach(todo => createTodoListItem(todo, selectedDate));
 }
-
 
 document.addEventListener("DOMContentLoaded", function() {
     // Selecting all days, which are list items
@@ -174,7 +176,11 @@ document.addEventListener("DOMContentLoaded", function() {
     days.forEach(day => addEventListenerToDay(day));
     
     const addTaskButton = document.querySelector("#addTaskButton");
-    addTaskButton.addEventListener("click", handleAddTaskButtonClick);
+    addTaskButton.addEventListener("click", handleAddTask);
+
+    // Adding event listener for Enter key press on the input field
+    const taskInput = document.querySelector("#newTaskInput");
+    taskInput.addEventListener("keydown", handleAddTask);
 
     saveTodosToStorage(sampleTodos);
 });
