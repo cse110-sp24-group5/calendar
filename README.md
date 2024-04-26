@@ -52,8 +52,8 @@
 + Mishka Jethwani (Team Lead)
 
 ## Github Pages Link
-https://cse110-sp24-group5.github.io/calendar/
-
+You can access our calendar WebApp here: https://cse110-sp24-group5.github.io/calendar/
+If you would like to see a demo of this, you can checkout the video here. [ADD YOUTUBE LINK]
 
 ## Purpose
 This calendar is used to display the days of the month (April) while keeping track of the tasks the user has listed on any given day of the month
