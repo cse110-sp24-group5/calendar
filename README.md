@@ -34,7 +34,10 @@
 
 - [**Purpose**](#purpose)
 
+- [**Features**](#features)
+
 - [**Linting**](#linting)
+
 - [**Future Improvements**](#future-improvements)
   
 - [**SWOT Analysis**](#swot-analysis)
