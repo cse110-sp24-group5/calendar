@@ -71,13 +71,13 @@ Users can easily track their tasks by clicking on a specific day by clicking on 
 The application offers a clean calendar view, making it easy for users to navigate their schedules. The calendar is displayed prominently, with the current month (April's) dates clearly visible.
 
 #### 2. Selecting a Date
-Users can easily select a specific date by clicking on it within the calendar view. This action will display a list of tasks scheduled for that particular date, providing a clear overview of their daily commitments. You can also navigate to the next dare by just pressing the ```tab``` button on your keybord. 
+Users can easily select a specific date by clicking on it within the calendar view. This action will display a list of tasks scheduled for that particular date, providing a clear overview of their daily commitments. You can also navigate to the next date by just pressing the ```tab``` button on your keybord. 
 
 #### 3. Adding Tasks
  Users can create a new task by clicking on a date and entering the task details, and clicking the add button. You can also add a task in by clicking on the ```enter``` button.
 
 #### 4. Removing Tasks
-In order to keep everything up-to-date. Users can simply locate the task they wish to remove and click the remove button. This feature ensures that the calendar remains accurate and can be editted any time.
+In order to keep everything up-to-date. Users can simply locate the task they wish to remove and click the remove button. This feature ensures that the calendar remains accurate and can be edited any time.
 
 #### 5. Data Storage
 One another feature of this calendar is it persistently stores your information locally, even if you accidentally refresh the page or close and reopen the application. Your tasks, events, and calendar data are stored.
