@@ -122,7 +122,7 @@ To run only the Javascript lint: `npm run lint:js`
 
 **Opportunities:**
 
-| Opurtunity | Details |
+| Opportunity | Details |
 | --- | --- |
 | **Additional Features** | - Adding all the months to the calendar along with a toggle bar to change the months <br> - Making the Task List more customizable <br> - Allow people to schedule events on the calendar (start and end time) instead of just adding todos <br> - Recurring events on the calendar |
 | **Real Implication** | - We got to use HTML, CSS and JS to build a useful application |
