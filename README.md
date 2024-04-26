@@ -134,7 +134,7 @@ To run only the Javascript lint: `npm run lint:js`
 | Threat | Details |
 | --- | --- |
 | **Deadlines** | - Tight turnaround time for all teams to complete their respective subtasks |
-| **Learning** | -We had a little time to learn how to use JavaScript, a new language for some |
+| **Learning** | - We had a little time to learn how to use JavaScript, a new language for some |
 
 ## Our Learnings
 
@@ -143,7 +143,11 @@ Applying Labs to a Real-World Application
 Throughout this project, we had the opportunity to apply the concepts and techniques learned in the course labs to a practical, real-world application. Translating theoretical knowledge into a functional web application helped us truly understand how everything works. We also learned how the development process works, and how different members in a team contribute. 
 
 
-Effective Use of AI Assistance
+Effective Use of AI Assistance.
 
 During the development process, we learned how to effectively leverage AI assistance tools to enhance our productivity and understand the technologies better.
+
+We learned how to divide different tasks efficiently in the group.
+
+We learned how to teamwork in a real project.
 
