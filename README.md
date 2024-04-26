@@ -1,6 +1,32 @@
 ### Click on our banner to see our calendar!
 [![banner.png](banner.png)](https://cse110-sp24-group5.github.io/calendar/)
 
+<p align="center">
+  <!-- HTML Badge -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+    <img src="https://img.shields.io/badge/HTML-Latest-yellow.svg" alt="HTML Latest">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+
+  <!-- JavaScript Badge -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+    <img src="https://img.shields.io/badge/JavaScript-Latest-yellow.svg" alt="JavaScript Latest">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+
+  <!-- CSS Badge -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+    <img src="https://img.shields.io/badge/CSS-Latest-yellow.svg" alt="CSS Latest">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+
+  <!-- SuperLinter Badge -->
+  <a href="https://github.com/github/super-linter">
+    <img src="https://img.shields.io/badge/SuperLinter-Latest-yellow.svg" alt="SuperLinter Latest">
+  </a>
+</p>
+
+
 ## Github Pages Link
 https://cse110-sp24-group5.github.io/calendar/
 
