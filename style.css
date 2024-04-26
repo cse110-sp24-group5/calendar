@@ -173,7 +173,7 @@ img {
 }
 
 /* select a date and it's highlighted */
-.days li:focus {
+.days li.focused {
     background-color: var(--color1);
     border-style: solid;
     border-color: var(--color1);

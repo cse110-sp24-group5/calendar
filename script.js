@@ -94,6 +94,14 @@ function createTodoListItem(todo, date) {
 
 // Function to handle click event on a day
 function handleDayClick(day) {
+    // Remove focus from previously selected date, if any
+    const previouslySelectedDay = document.querySelector('.days li.focused');
+    if (previouslySelectedDay) {
+        previouslySelectedDay.classList.remove('focused');
+    }
+    // Add focused class to the clicked date
+    this.classList.add('focused');
+
     const date = `2024-04-${this.innerText.trim()}`;
 
     selectedDate = date;
