@@ -52,19 +52,33 @@
 + Mishka Jethwani (Team Lead)
 
 ## Github Pages Link
-You can access our calendar WebApp here: https://cse110-sp24-group5.github.io/calendar/
+You can access our calendar WebApp here: https://cse110-sp24-group5.github.io/calendar/.
+
 If you would like to see a demo of this, you can checkout the video here. [ADD YOUTUBE LINK]
 
 ## Purpose
-This calendar is used to display the days of the month (April) while keeping track of the tasks the user has listed on any given day of the month
+The main purpose of this calendar application is to boost productivity. It provides users with a convenient and user-friendly way to visualize the days of the month, with a focus on the month of April in 2024. This application aims to simplify the task of keeping track of daily events, appointments, and reminders by offering a comprehensive calendar view.
 
-## How to Access Software
-To access the calendar,go to the following Github Pages Link : **Insert link here**
+Users can easily track their tasks by clicking on a specific day by clicking on it, this will then  display a list of tasks scheduled for that particular date. This feature ensures that users can stay organized and never miss an important event or deadline.
 
 ## Features
-+ Users are able to click on dates to see tasks scheduled for that day
-+ Users should also be able to add and remove tasks
 
+[![display.png](banner.png)
+
+#### 1. Calendar View
+The application offers a clean calendar view, making it easy for users to navigate their schedules. The calendar is displayed prominently, with the current month (April's) dates clearly visible.
+
+#### 2. Selecting a Date
+Users can easily select a specific date by clicking on it within the calendar view. This action will display a list of tasks scheduled for that particular date, providing a clear overview of their daily commitments.
+
+#### 3. Adding Tasks
+ Users can create a new task by clicking on a date and entering the task details, and clicking the add button. 
+
+#### 4. Removing Tasks
+In order to keep everything up-to-date. Users can simply locate the task they wish to remove and click the remove button. This feature ensures that the calendar remains accurate and can be editted any time.
+
+#### 5. Duplicate Task Detection
+To prevent accidental duplication of tasks, the application includes a helpful feature. If a user attempts to add the same task more than once, a pop-up notification will appear, alerting them to the potential duplicate entry.
 
 ## Linting
 Linting has been set up for HTML.
