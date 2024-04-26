@@ -57,7 +57,7 @@
 ## Github Pages Link
 You can access our calendar WebApp here: https://cse110-sp24-group5.github.io/calendar/.
 
-If you would like to see a demo of this, you can checkout the video here. [ADD YOUTUBE LINK]
+If you would like to see a demo of this, you can checkout the video [here](https://www.youtube.com/watch?v=sZNxWUYSLT0).
 
 ## Purpose
 The main purpose of this calendar application is to boost productivity. It provides users with a convenient and user-friendly way to visualize the days of the month, with a focus on the month of April in 2024. This application aims to simplify the task of keeping track of daily events, appointments, and reminders by offering a comprehensive calendar view.
