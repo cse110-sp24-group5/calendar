@@ -31,8 +31,16 @@ function saveTodosToStorage(todos) {
 function createTodoListItem(todo, date) {
     const listItem = document.createElement("li");
     const checkbox = document.createElement("input");
+    const button = document.createElement("button");
     checkbox.type = "checkbox";
     checkbox.checked = todo.done;
+
+    // give each button a date and title attribute so that it can be matched up with its respective task (Credit to ChatGPT)
+    button.setAttribute("date", date);
+    button.setAttribute("title", todo.title);
+
+    // Add a class to the delete button so that it can be styled (credit to ChatGPT)
+    button.classList.add("deleteButton");
 
     // Add event listener to checkbox
     checkbox.addEventListener("change", function() {
@@ -55,8 +63,31 @@ function createTodoListItem(todo, date) {
         saveTodosToStorage(todos);
     });
 
+    // task deletion button credit of our backend team's brainpower and a lot of ChatGPT's processing power
+    // Add event listener to button such that when the button is pressed, its respective task is deleted
+    button.addEventListener("click", function() {
+        const todos = loadTodosFromStorage();
+        const date = this.getAttribute("date");
+        const title = this.getAttribute("title");
+
+        // Check if todos for the date exist
+        if(todos[date]) {
+            // Use filter to remove the task with the given title
+            todos[date] = todos[date].filter(todoItem => todoItem.title !== title);
+
+            saveTodosToStorage(todos);
+
+            // Refresh the task list
+            // !!!!! ALERT !!!!! not quite sure what the below does ... 
+            const taskList = document.querySelector(".task-list ul");
+            taskList.innerHTML = ""; // Clear taskList before repopulating it
+            todos[date].forEach(todo => createTodoListItem(todo, date));
+        }
+    });
+
     listItem.appendChild(checkbox);
     listItem.appendChild(document.createTextNode(todo.title));
+    listItem.appendChild(button);
     const taskList = document.querySelector(".task-list ul");
     taskList.appendChild(listItem);
 }

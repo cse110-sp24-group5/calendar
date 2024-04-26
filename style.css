@@ -253,3 +253,17 @@ img {
     margin-top: 100px;
     margin-left: 60px;
 }
+
+/*credit of ChatGPT*/
+.deleteButton {
+    background-color: red;
+    color: white;
+    padding: 8px 12 px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: rgb(119, 17, 17);
+}
