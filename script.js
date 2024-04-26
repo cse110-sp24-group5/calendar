@@ -103,7 +103,8 @@ function handleDayClick(day) {
   
     const taskList = document.querySelector(".task-list ul"); // Select the task list element
     taskList.innerHTML = ""; // Clear taskList before populating it
-    todos.forEach(todo => createTodoListItem(todo, date)); // add HTML to the element
+    
+    if (todos) todos.forEach(todo => createTodoListItem(todo, date)); // add HTML to the element
 }
   
 // Function to add event listener to each day
@@ -199,4 +200,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Adding event listener for Enter key press on the input field
     const taskInput = document.querySelector("#newTaskInput");
     taskInput.addEventListener("keydown", handleAddTask);
+
+    if (localStorage.getItem("todos") == null) saveTodosToStorage({})
 });
