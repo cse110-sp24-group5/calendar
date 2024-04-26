@@ -14,29 +14,26 @@
   }
   
 
-  @media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {
     .parent {
-      flex-direction: column; /* This will stack children vertically on small screens */
+        flex-direction: column; /* This will stack children vertically on small screens */
     }
   
     .child {
-      flex-basis: 100%;
-      max-width: 100%; /* Each block takes the full width of the container */
+        flex-basis: 100%;
+        max-width: 100%; /* Each block takes the full width of the container */
       
     }
   
     .team-logo {
-      margin-bottom: 0; /* Adjusted to align properly */
+        margin-bottom: 0; /* Adjusted to align properly */
     }
 
     .calendar-widget {
-    /* Added margin to center block */
-    margin-left: -2rem;
-    margin-right: 0;
-
-}
-
-
+        /* Added margin to center block */
+        margin-left: -2rem;
+        margin-right: 0;
+    }
 }  
 
 
@@ -245,12 +242,4 @@ img {
 
 .add-task-container button:hover {
     background-color: var(--color3);
-}
-
-.deleteButton {
-    margin-left: 270px;
-    font-size: x-small;
-    background-color: #eb6e8b;
-    color: white;
-    font-weight: bold;
 }

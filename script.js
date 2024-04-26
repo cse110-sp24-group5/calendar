@@ -45,6 +45,11 @@ function createTodoListItem(todo, date) {
 
     // Styling for elements not in the html file
     button.textContent = "Remove";
+    button.style.marginLeft = "270px";
+    button.style.fontSize = "x-small";
+    button.style.backgroundColor = "#eb6e8b";
+    button.style.color = "white";
+    button.style.fontWeight = "bold";
     hrline.style.width = "80%";
     hrline.style.borderColor = "white";
 
