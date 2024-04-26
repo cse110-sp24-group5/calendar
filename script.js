@@ -1,18 +1,6 @@
 // Keep track of selected day
 let selectedDate = null
 
-// Data in local storage
-const sampleTodos = {
-    "2024-04-1": [
-      { title: "Task 1", done: false },
-      { title: "Task 2", done: true }
-    ],
-    "2024-04-2": [
-      { title: "Task 3", done: false }
-    ]
-  };
-
-
 // Loads the todo list from local storate stored in a JSON like format
 function loadTodosFromStorage() {
     // Check if todos exist in localStorage
@@ -123,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const addTaskButton = document.querySelector("#addTaskButton");
     addTaskButton.addEventListener("click", handleAddTaskButtonClick);
 
-    saveTodosToStorage(sampleTodos);
 });
 
 // Function to handle click event on the "Add Task" button or Enter key press
@@ -181,6 +168,4 @@ document.addEventListener("DOMContentLoaded", function() {
     // Adding event listener for Enter key press on the input field
     const taskInput = document.querySelector("#newTaskInput");
     taskInput.addEventListener("keydown", handleAddTask);
-
-    saveTodosToStorage(sampleTodos);
 });
