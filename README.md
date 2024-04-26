@@ -1,4 +1,4 @@
-# Calendar
+### Click on our banner to see our calendar!
 [![banner.png](banner.png)](https://cse110-sp24-group5.github.io/calendar/)
 
 ## Github Pages Link
