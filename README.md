@@ -51,6 +51,7 @@
 + Hugo D Souza
 + Stephen Tong
 + Maasilan Kumaraguru
++ Xavier Navarro
 + Arnav Modi (Team Lead)
 + Mishka Jethwani (Team Lead)
 
