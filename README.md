@@ -28,7 +28,6 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Team Members](#team-members)
 - [Github Pages Link](#github-pages-link)
 - [Purpose](#purpose)
