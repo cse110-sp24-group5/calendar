@@ -137,16 +137,16 @@ To run only the Javascript lint: `npm run lint:js`
 
 ## Our Learnings
 
-Applying Labs to a Real-World Application
+**Applying Labs to a Real-World Application**
 
 Throughout this project, we had the opportunity to apply the concepts and techniques learned in the course labs to a practical, real-world application. Translating theoretical knowledge into a functional web application helped us truly understand how everything works. We also learned how the development process works, and how different members in a team contribute. 
 
 
-Effective Use of AI Assistance.
+**Effective Use of AI Assistance**
 
 During the development process, we learned how to effectively leverage AI assistance tools to enhance our productivity and understand the technologies better.
 
-We learned how to divide different tasks efficiently in the group.
+**Team Work**
 
-We learned how to teamwork in a real project.
+We learned how to effectively communicate among ourselves. We divided ourselves into 3 teams, one for HTML, CSS and Javascript each. We learned how to manage and collaborate amongst ourselves and properly use github actions to organize tasks. 
 
