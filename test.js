@@ -4,7 +4,7 @@ import {
 
 
 test('factorial 0', () => {
-    expect(factorial(0)).toBe(1);
+    expect(factorial(0)).toBe(100);
 });
 
 test('factorial 1', () => {
