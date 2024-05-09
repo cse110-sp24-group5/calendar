@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lint:html": "npx htmlhint ./*.html",
     "lint:css": "npx stylelint ./*.css",
@@ -10,5 +11,10 @@
     "eslint": "^9.1.1",
     "globals": "^15.0.0",
     "stylelint-config-standard-scss": "^13.1.0"
+  },
+  "type": "module",
+  "jest": {
+    "transform": {},
+    "verbose": true
   }
 }
