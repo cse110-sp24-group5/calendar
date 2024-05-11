@@ -10,6 +10,5 @@ export default [
         jest = "readonly"
       }
     }
-  },
-  pluginJs.configs.recommended
+  }
 ];
