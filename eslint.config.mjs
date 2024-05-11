@@ -4,10 +4,7 @@ import pluginJest from "eslint-plugin-jest";
 
 
 export default [
-  {languageOptions: { globals: globals.browser }},
-  pluginJs.configs.recommended,
-  {
-    plugins: { jest: pluginJest },
-    languageOptions: { globals: { jest: "readonly" }}
-  }
+  {plugins: { jest: pluginJest }},
+  {languageOptions: { jest: "readonly", globals: globals.browser }},
+  pluginJs.configs.recommended
 ];
