@@ -3,14 +3,14 @@ import pluginJs from "@eslint/js";
 import pluginJest from "eslint-plugin-jest";
 
 export default [
-  plugins: {
+  {plugins: {
     jest: pluginJest,
-  },
-  languageOptions: {
+  }},
+  {languageOptions: {
     globals: {
       globals: globals.browser
       jest: "readonly",
     },
-  },
+  }},
   pluginJs.configs.recommended,
 ];
