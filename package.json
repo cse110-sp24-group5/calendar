@@ -18,7 +18,7 @@
   "jest": {
     "transform": {},
     "verbose": true
-  }
+  },
   "env": {
     "jest/globals": true
   }
