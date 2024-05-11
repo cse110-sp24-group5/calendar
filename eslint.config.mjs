@@ -1,14 +1,8 @@
+import globals from "globals";
 import pluginJs from "@eslint/js";
 
-export default {
-  // Inline the configuration you're extending
-  ...pluginJs.configs.recommended,
 
-  // Specify environments
-  env: {
-    jest: true,
-  },
-
-  // Specify ESLint plugins
-  plugins: ['jest'],
-};
+export default [
+  {languageOptions: { globals: globals.browser }},
+  pluginJs.configs.recommended,
+];
