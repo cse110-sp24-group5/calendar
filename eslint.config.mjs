@@ -1,15 +1,18 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import jest from "eslint-plugin-jest";
+const jest = require('eslint-plugin-jest');
 
-export default [
-  { languageOptions: { globals: globals.browser } },
-{
-  "plugins": ["jest"]
-},
+module.exports = [
+  ...require('@eslint/js').configs.recommended,
   {
-  "env": {
-    "jest/globals": true
-  }
-},
+    files: ['test/**'],
+    ...jest.configs['flat/recommended'],
+    rules: {
+      ...jest.configs['flat/recommended'].rules,
+      'jest/prefer-expect-assertions': 'off',
+    },
+  },
+  // you can also configure jest rules in other objects, so long as some of the `files` match
+  {
+    files: ['test/**'],
+    rules: { 'jest/prefer-expect-assertions': 'off' },
+  },
 ];
