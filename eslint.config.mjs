@@ -1,8 +1,8 @@
 import pluginJs from "@eslint/js";
 
 export default {
-  // Extend with recommended configuration from pluginJs
-  extends: [pluginJs.configs.recommended],
+  // Inline the configuration you're extending
+  ...pluginJs.configs.recommended,
 
   // Specify environments
   env: {
