@@ -8,7 +8,7 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser, // Assuming globals.browser is an object containing global variables
-        jest: "readonly"
+        ...jest
       }
     }
   },
