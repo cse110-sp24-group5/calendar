@@ -5,12 +5,15 @@ export default {
   plugins: {
     jest: pluginJest,
   },
+  languageOptions: {
+    globals: {
+      jest: "readonly",
+      // Add any other global variables here if needed
+    },
+  },
   rules: {
     // Define ESLint rules here if needed
     // Example:
     // "no-console": "off"
-  },
-  env: {
-    jest: true, // Set Jest environment
   },
 };
