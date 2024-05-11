@@ -7,7 +7,7 @@ export default [
   pluginJs.configs.recommended,
 
   {
-    "plugins": ["jest"]
+    "plugins": {"jest"}
   },
   
   {
