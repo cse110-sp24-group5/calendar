@@ -1,19 +1,16 @@
+import globals from "globals";
 import pluginJs from "@eslint/js";
 import pluginJest from "eslint-plugin-jest";
 
-export default {
+export default [
   plugins: {
     jest: pluginJest,
   },
   languageOptions: {
     globals: {
+      globals: globals.browser
       jest: "readonly",
-      // Add any other global variables here if needed
     },
   },
-  rules: {
-    // Define ESLint rules here if needed
-    // Example:
-    // "no-console": "off"
-  },
-};
+  pluginJs.configs.recommended,
+];
