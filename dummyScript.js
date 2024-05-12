@@ -1,5 +1,6 @@
-/**This is just some dummy code that finds the factorial of some passed value
-* @param {number} value - is the value whose factorial you want to find
+/**
+ * Dummy code that finds the factorial of some passed value
+ * @param {number} value - is the value whose factorial you want to find
 */
 export function factorial (value) {
     //base cases
