@@ -4,9 +4,7 @@
 */
 export function factorial (value) {
     //base cases
-    if(value === 0)
-        return 1;
-    else if(value == 1)
+    if(value === 0 || value == 1)
         return 1;
     //recursive case
     return value * factorial(value - 1);
