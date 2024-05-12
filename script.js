@@ -1,7 +1,10 @@
 // Keep track of selected day
 let selectedDate = null
 
-/**Loads the todo list from local storate stored in a JSON like format*/
+/**
+ * Loads the todo list from local storage
+ * @returns {Array | null} Array corresponding to "todos" key, null if key does not exist  
+*/
 function loadTodosFromStorage() {
     // Check if todos exist in localStorage
     const storedTodos = localStorage.getItem("todos");
@@ -13,8 +16,10 @@ function loadTodosFromStorage() {
     }
 }
   
-/**Function to get tasks for a specific date given a date
-* @param {string} date - the date on the calendar
+/**
+ * Get todos for a specific date from local storage
+ * @param {string} date - date with format yyyy-mm-dd
+ * @returns {Array} - list of todos for date
 */
 function getTodosForDate(date) {
     const todos = loadTodosFromStorage();
@@ -22,7 +27,8 @@ function getTodosForDate(date) {
     return todos[date];
 }
   
-/**Function to save todos to localStorage
+/**
+ * Save todos to localStorage
 * @param {json} todos - the json of the todos on the list for a given day
 */
 function saveTodosToStorage(todos) {
@@ -31,9 +37,10 @@ function saveTodosToStorage(todos) {
 }
 
   
-/**Function to create a todo list item
-* @param {json} todos - the json of the todos on the list for a given day
-* @param {string} date - the date on the calendar
+/**
+ * Create a todo list item
+ * @param {json} todos - the json of the todos on the list for a given day
+ * @param {string} date - the date on the calendar
 */
 function createTodoListItem(todo, date) {
     const listItem = document.createElement("li");
@@ -111,8 +118,9 @@ function createTodoListItem(todo, date) {
     taskList.appendChild(listItem);
 }
 
-/**Function to handle click event on a day
-* @param {event object} event - depending on what type of event, a task will be added or removed
+/**
+ * Handle click event on a day
+ * @param {event object} event - depending on what type of event, a task will be added or removed
 */
 function handleDayClick(event) {
     if (event.type === "click" || (event.type === "keydown" && event.key === "Enter")) {
@@ -138,16 +146,18 @@ function handleDayClick(event) {
     }
 }
     
-/** Function to add event listener to each day
-* @param {list item} day - specific day that you can click on
+/** 
+ * Add event listener to each day
+ * @param {list item} day - specific day that you can click on
 */
 function addEventListenerToDay(day) {
     day.addEventListener("click", handleDayClick); // day is a list item
     day.addEventListener("keydown", handleDayClick); // so we can tab+enter dates
 }
 
-/**Function to handle click event on the "Add Task" button or Enter key press
-* @param {event object} event - depending on event, task is added
+/**
+ * Handle click event on the "Add Task" button or Enter key press
+ * @param {event object} event - depending on event, task is added
 */
 function handleAddTask(event) {
     // Check if the event is a click on the button or the Enter key press
