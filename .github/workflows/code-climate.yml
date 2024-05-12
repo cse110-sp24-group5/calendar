@@ -2,17 +2,10 @@ name: build
 on:
   push:
     branches:
-      - master
-    tags:
-      - '!*' # Do not execute on tags
-    paths:
-      - src/*
-      - test/*
-      - '*.json'
-      - yarn.lock
+      - main
   pull_request:
-    paths:
-      - '!*.MD'
+    branches:
+      - main
 jobs:
   test:
     strategy:
