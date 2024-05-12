@@ -1,3 +1,5 @@
+/* global test, expect */
+
 /** Import the function that we want to test*/
 import {
     factorial
