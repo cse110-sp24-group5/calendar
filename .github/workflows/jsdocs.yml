@@ -1,6 +1,5 @@
 name: Generate JSDocs
 
-on:
 on: # on all branches
   push:
 
