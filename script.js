@@ -120,7 +120,7 @@ function createTodoListItem(todo, date) {
 
 /**
  * Handle click event on a day
- * @param {event object} event - depending on what type of event, a task will be added or removed
+ * @param {EventObject} event - depending on what type of event, a task will be added or removed
 */
 function handleDayClick(event) {
     if (event.type === "click" || (event.type === "keydown" && event.key === "Enter")) {
@@ -148,7 +148,7 @@ function handleDayClick(event) {
     
 /** 
  * Add event listener to each day
- * @param {list item} day - specific day that you can click on
+ * @param {ListItem} day - specific day that you can click on
 */
 function addEventListenerToDay(day) {
     day.addEventListener("click", handleDayClick); // day is a list item
@@ -157,7 +157,7 @@ function addEventListenerToDay(day) {
 
 /**
  * Handle click event on the "Add Task" button or Enter key press
- * @param {event object} event - depending on event, task is added
+ * @param {EventObject} event - depending on event, task is added
 */
 function handleAddTask(event) {
     // Check if the event is a click on the button or the Enter key press
@@ -209,8 +209,9 @@ function handleAddTask(event) {
         todos[selectedDate].forEach(todo => createTodoListItem(todo, selectedDate));
     }
 }
-/** Executes the events when the DOM tree is completely loaded
-* @param {event} DOMContentLoaded - event listeners for interacting with the tasks and todos are set up once the DOM tree is loaded
+/** 
+ * Executes the events when the DOM tree is completely loaded
+ * @param {event} DOMContentLoaded - event listeners for interacting with the tasks and todos are set up once the DOM tree is loaded
 */
 document.addEventListener("DOMContentLoaded", function() {
     // Selecting all days, which are list items
