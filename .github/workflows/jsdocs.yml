@@ -1,4 +1,6 @@
-name: Generate JSDoc Documentation
+- name: JSDoc Action
+  uses: andstor/jsdoc-action@v1.2.1
+            
 
 # On push to all branches
 on:
