@@ -1,16 +1,12 @@
-name: Lint
+name: CI/CD Pipeline
 
 on:
   push:
     branches:
-      - '*'  # Trigger on push to all branches
+      - '*'
   pull_request:
     branches:
-      - '*'  # Trigger on pull requests for all branches
-
-permissions:
-  checks: write
-  contents: write
+      - '*'
 
 jobs:
   run-linters:
@@ -37,3 +33,25 @@ jobs:
         run: npm install eslint --save-dev
       - name: Run ESLint
         run: npx eslint .
+
+  unit-tests: 
+    name: Run Unit Tests
+    runs-on: ubuntu-latest 
+
+    steps:
+      - uses: actions/checkout@v4 
+      - name: Install Dependencies
+        run: npm install
+      - name: Unit Test
+        run: run unitTests __tests__/*.unit.js
+
+  e2e-tests: 
+    name: Run End-to-End Tests
+    runs-on: ubuntu-latest 
+
+    steps:
+      - uses: actions/checkout@v4 
+      - name: Install Dependencies
+        run: npm install
+      - name: e2e Tests
+        run: npm run e2eTests __tests__/*.e2e.js
