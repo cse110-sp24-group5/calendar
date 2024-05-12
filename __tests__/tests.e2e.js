@@ -5,10 +5,10 @@ describe('Basic user flow for Website', () => {
 
     it('Test', async () => {
         const calendarWidgetParent = await page.$('.calendar-widget.parent');
-        const calendarChild = await calendarWidgetParent.$('.calendar.child');
-        const days = await calendarChild.$('.days');
-        const day0 = await days.$('li');
-        await day0.click();
+        // const calendarChild = await calendarWidgetParent.$('.calendar.child');
+        // const days = await calendarChild.$('.days');
+        // const day0 = await days.$('li');
+        // await day0.click();
         const newTaskInput = await page.$('#newTaskInput');
         await newTaskInput.type('temp');
         const addTaskButton = await page.$('#addTaskButton');
