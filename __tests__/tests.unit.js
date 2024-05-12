@@ -15,6 +15,6 @@ test('factorial 5', () => {
     expect(factorial(5)).toBe(120);
 });
 
-test('factorial 9', () => {
-    expect(factorial(6)).toBe(720);
+test('factorial 6', () => {
+    expect(factorial(9)).toBe(720);
 });
