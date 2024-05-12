@@ -18,8 +18,8 @@ test('factorial 5', () => {
     expect(factorial(5)).toBe(120);
 });
 
-/** This tests if the factorial function outputs 720 if it is passed param 9*/
-test('factorial 9', () => {
+/** This tests if the factorial function outputs 720 if it is passed param 6*/
+test('factorial 6', () => {
     expect(factorial(6)).toBe(720);
 });
 
