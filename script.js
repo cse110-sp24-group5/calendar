@@ -1,7 +1,10 @@
 // Keep track of selected day
 let selectedDate = null
 
-// Loads the todo list from local storate stored in a JSON like format
+/**
+ * Loads the todo list from local storage
+ * @returns {Array | null} Array corresponding to "todos" key, null if key does not exist  
+*/
 function loadTodosFromStorage() {
     // Check if todos exist in localStorage
     const storedTodos = localStorage.getItem("todos");
@@ -13,21 +16,32 @@ function loadTodosFromStorage() {
     }
 }
   
-// Function to get tasks for a specific date given a date
+/**
+ * Get todos for a specific date from local storage
+ * @param {string} date - date with format yyyy-mm-dd
+ * @returns {Array} - list of todos for date
+*/
 function getTodosForDate(date) {
     const todos = loadTodosFromStorage();
     date = String(date) // convert date to a String
     return todos[date];
 }
   
-// Function to save todos to localStorage
+/**
+ * Save todos to localStorage
+* @param {json} todos - the json of the todos on the list for a given day
+*/
 function saveTodosToStorage(todos) {
     // Converting JSON to string to store into local storage
     localStorage.setItem("todos", JSON.stringify(todos));
 }
 
   
-// Function to create a todo list item
+/**
+ * Create a todo list item
+ * @param {json} todos - the json of the todos on the list for a given day
+ * @param {string} date - the date on the calendar
+*/
 function createTodoListItem(todo, date) {
     const listItem = document.createElement("li");
     const checkbox = document.createElement("input");
@@ -104,7 +118,10 @@ function createTodoListItem(todo, date) {
     taskList.appendChild(listItem);
 }
 
-// Function to handle click event on a day
+/**
+ * Handle click event on a day
+ * @param {EventObject} event - depending on what type of event, a task will be added or removed
+*/
 function handleDayClick(event) {
     if (event.type === "click" || (event.type === "keydown" && event.key === "Enter")) {
         // Remove focus from previously selected date, if any
@@ -129,13 +146,19 @@ function handleDayClick(event) {
     }
 }
     
-// Function to add event listener to each day
+/** 
+ * Add event listener to each day
+ * @param {ListItem} day - specific day that you can click on
+*/
 function addEventListenerToDay(day) {
     day.addEventListener("click", handleDayClick); // day is a list item
     day.addEventListener("keydown", handleDayClick); // so we can tab+enter dates
 }
 
-// Function to handle click event on the "Add Task" button or Enter key press
+/**
+ * Handle click event on the "Add Task" button or Enter key press
+ * @param {EventObject} event - depending on event, task is added
+*/
 function handleAddTask(event) {
     // Check if the event is a click on the button or the Enter key press
     if (event.type === "click" || (event.type === "keydown" && event.key === "Enter")) {
@@ -186,7 +209,10 @@ function handleAddTask(event) {
         todos[selectedDate].forEach(todo => createTodoListItem(todo, selectedDate));
     }
 }
-
+/** 
+ * Executes the events when the DOM tree is completely loaded
+ * @param {event} DOMContentLoaded - event listeners for interacting with the tasks and todos are set up once the DOM tree is loaded
+*/
 document.addEventListener("DOMContentLoaded", function() {
     // Selecting all days, which are list items
     const days = document.querySelectorAll(".days li");
