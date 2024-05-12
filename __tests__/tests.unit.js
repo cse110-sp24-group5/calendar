@@ -1,6 +1,6 @@
 import {
     factorial
-} from './dummyScript.js';
+} from '../dummyScript.js';
 
 
 test('factorial 0', () => {
