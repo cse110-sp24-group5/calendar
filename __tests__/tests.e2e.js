@@ -1,4 +1,3 @@
-
 describe('Basic user flow for Website', () => {
     beforeAll(async () => {
         await page.goto('https://cse110-sp24-group5.github.io/calendar/');
