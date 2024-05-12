@@ -18,3 +18,5 @@ jobs:
           source_dir: . # the current directory in this case is the source
           output_dir: ./docs/jsdoc  # Output directory
           recurse: true  # Recurse into subdirectories
+          config_file: conf.json
+          template: minami
