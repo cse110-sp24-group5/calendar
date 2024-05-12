@@ -43,7 +43,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Unit Test
-        run: run unitTests __tests__/*.unit.js
+        run: npm run unitTests __tests__/*.unit.js
 
   e2e-tests: 
     name: Run End-to-End Tests
