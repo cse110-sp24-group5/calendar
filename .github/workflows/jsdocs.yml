@@ -1,0 +1,20 @@
+name: Generate JSDoc Documentation
+
+# On push to all branches
+on:
+  push:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Build JSDoc
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: . # the current directory in this case is the source
+          output_dir: ./docs/jsdoc  # Output directory
+          recurse: true  # Recurse into subdirectories
