@@ -19,4 +19,3 @@ jobs:
           output_dir: ./docs/jsdoc  # Output directory
           recurse: true  # Recurse into subdirectories
           config_file: conf.json
-          template: minami
