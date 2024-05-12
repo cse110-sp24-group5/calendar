@@ -2,7 +2,6 @@
   "scripts": {
     "unitTests": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "e2eTests": "jest",
-    "test": "jest test.js",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lint:html": "npx htmlhint ./*.html",
     "lint:css": "npx stylelint ./*.css",
