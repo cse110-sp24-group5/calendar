@@ -9,5 +9,5 @@ jobs: # the things being executed
       - uses: actions/checkout@v4 # using version 4 of Actions
       - name: Install Dependencies
         run: npm install
-      - name: Unit Test
-        run: npm run unitTests __tests__/*e2e.js # the actual testing line
+      - name: e2e Test
+        run: npm run e2eTests __tests__/*e2e.js # the actual testing line
