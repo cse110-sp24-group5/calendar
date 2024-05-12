@@ -19,9 +19,9 @@
     "istanbul": "^0.4.5",
     "jest": "^29.7.0",
     "jest-puppeteer": "^10.0.1",
-    "puppeteer": "^22.8.0",
     "jsdoc": "^4.0.3",
     "mocha": "^10.4.0",
+    "puppeteer": "^22.8.0",
     "stylelint-config-standard-scss": "^13.1.0"
   },
   "type": "module",
@@ -32,6 +32,7 @@
     "preset": "jest-puppeteer"
   },
   "dependencies": {
+    "jsdocs": "^1.0.0",
     "nyc": "^15.1.0"
   }
 }
