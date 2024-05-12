@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addEventListenerToDay">addEventListenerToDay</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#createTodoListItem">createTodoListItem</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#factorial">factorial</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getTodosForDate">getTodosForDate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#handleAddTask">handleAddTask</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#handleDayClick">handleDayClick</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#loadTodosFromStorage">loadTodosFromStorage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveTodosToStorage">saveTodosToStorage</a></span></li>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h3>Click on our banner to see our calendar!</h3>
+<p><a href="https://cse110-sp24-group5.github.io/calendar/"><img src="banner.png" alt="banner.png"></a></p>
+<p align="center">
+  <!-- HTML Badge -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+    <img src="https://img.shields.io/badge/HTML-Latest-yellow.svg" alt="HTML Latest">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <!-- JavaScript Badge -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+    <img src="https://img.shields.io/badge/JavaScript-Latest-yellow.svg" alt="JavaScript Latest">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <!-- CSS Badge -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+    <img src="https://img.shields.io/badge/CSS-Latest-yellow.svg" alt="CSS Latest">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <!-- SuperLinter Badge -->
+  <a href="https://github.com/github/super-linter">
+    <img src="https://img.shields.io/badge/SuperLinter-Latest-yellow.svg" alt="SuperLinter Latest">
+  </a>
+</p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#team-members">Team Members</a></li>
+<li><a href="#github-pages-link">Github Pages Link</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#features">Features</a>
+<ul>
+<li><a href="#1-calendar-view">1. Calendar View</a></li>
+<li><a href="#2-selecting-a-date">2. Selecting a Date</a></li>
+<li><a href="#3-adding-tasks">3. Adding Tasks</a></li>
+<li><a href="#4-removing-tasks">4. Removing Tasks</a></li>
+<li><a href="#5-data-storage">5. Data Storage</a></li>
+<li><a href="#6-duplicate-task-detection">6. Duplicate Task Detection</a></li>
+</ul>
+</li>
+<li><a href="#linting">Linting</a></li>
+<li><a href="#swot-analysis">SWOT Analysis</a></li>
+<li><a href="#our-learnings">Our Learnings</a></li>
+</ul>
+<h2>Team Members</h2>
+<ul>
+<li>Drishti Regmi</li>
+<li>Haley Nguyen</li>
+<li>Vishaal Gaddipati</li>
+<li>Nicholas Cheah</li>
+<li>Angel Ren</li>
+<li>Hugo D Souza</li>
+<li>Stephen Tong</li>
+<li>Maasilan Kumaraguru</li>
+<li>Xavier Navarro</li>
+<li>Arnav Modi (Team Lead)</li>
+<li>Mishka Jethwani (Team Lead)</li>
+</ul>
+<h2>Github Pages Link</h2>
+<p>You can access our calendar WebApp here: https://cse110-sp24-group5.github.io/calendar/.</p>
+<p>If you would like to see a demo of this, you can checkout the video <a href="https://www.youtube.com/watch?v=sZNxWUYSLT0">here</a>.</p>
+<h2>Purpose</h2>
+<p>The main purpose of this calendar application is to boost productivity. It provides users with a convenient and user-friendly way to visualize the days of the month, with a focus on the month of April in 2024. This application aims to simplify the task of keeping track of daily events, appointments, and reminders by offering a comprehensive calendar view.</p>
+<p>Users can easily track their tasks by clicking on a specific day, this will then display a list of tasks scheduled for that particular date. This feature ensures that users can stay organized and never miss an important event or deadline.</p>
+<h2>Features</h2>
+<p><img src="display.png" alt="display.png"></p>
+<h4>1. Calendar View</h4>
+<p>The application offers a clean calendar view, making it easy for users to navigate their schedules. The calendar is displayed prominently, with the current month (April's) dates clearly visible.</p>
+<h4>2. Selecting a Date</h4>
+<p>Users can easily select a specific date by clicking on it within the calendar view. This action will display a list of tasks scheduled for that particular date, providing a clear overview of their daily commitments. You can also navigate to the next date by just pressing the <code>tab</code> button on your keybord.</p>
+<h4>3. Adding Tasks</h4>
+<p>Users can create a new task by clicking on a date and entering the task details, and clicking the add button. You can also add a task in by clicking on the <code>enter</code> button.</p>
+<h4>4. Removing Tasks</h4>
+<p>In order to keep everything up-to-date. Users can simply locate the task they wish to remove and click the remove button. This feature ensures that the calendar remains accurate and can be edited any time.</p>
+<h4>5. Data Storage</h4>
+<p>One another feature of this calendar is it persistently stores your information locally, even if you accidentally refresh the page or close and reopen the application. Your tasks, events, and calendar data are stored.</p>
+<h4>6. Duplicate Task Detection</h4>
+<p>To prevent accidental duplication of tasks, the application includes a helpful feature. If a user attempts to add the same task more than once, a pop-up notification will appear, alerting them to the potential duplicate entry.</p>
+<p><img src="duplicate-task.png" alt="duplicate-task.png"></p>
+<h2>Linting</h2>
+<p>Linting is a crucial practice that helps ensure code quality, consistency, and maintainability across the entire codebase. In this project, linting has been set up for HTML, CSS, and JavaScript to adhere to industry-standard best practices and coding conventions. HTML linting checks for proper markup structure, CSS linting maintains consistent stylesheet styles, and JavaScript linting catches syntax errors, potential bugs, and performance issues in the application's logic and functionality.</p>
+<p>We have implemented automated linting checks performed on every push or pull request to make sure potential issues are caught early in the development process, and make sure that our coding standard is met. When you push changes, on GitHub you will be able to see a tick or cross next to it based on whether it passes that check. You can click on the same to view details. Along with this you can also run the linter locally.</p>
+<p>To run all of them: <code>npm run lint</code></p>
+<p>To run only the HTML lint: <code>npm run lint:html</code></p>
+<p>To run only the CSS lint: <code>npm run lint:css</code></p>
+<p>To run only the Javascript lint: <code>npm run lint:js</code></p>
+<h2>SWOT Analysis</h2>
+<p><strong>Strengths:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Strength</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Efficiency</strong></td>
+<td>- Utilized GitHub issues to assign tasks to members and linked pull requests to handle issues</td>
+</tr>
+<tr>
+<td><strong>Organization</strong></td>
+<td>- Evenly divided tasks among group members, completed subtasks within self-imposed deadlines</td>
+</tr>
+<tr>
+<td><strong>Responsiveness</strong></td>
+<td>- Implemented webpage to adjust layout based on the device the page is loaded on</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Weaknesses:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Weakness</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lack of Widget features</strong></td>
+<td>- Widget only has the days of April listed, not a year-long calendar yet</td>
+</tr>
+<tr>
+<td><strong>Scheduling Meetings</strong></td>
+<td>- The team as a whole did not have many opportunities to have meetings in person to communicate the progress made so far</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opportunities:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Opportunity</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Additional Features</strong></td>
+<td>- Adding all the months to the calendar along with a toggle bar to change the months <br> - Making the Task List more customizable <br> - Allow people to schedule events on the calendar (start and end time) instead of just adding todos <br> - Recurring events on the calendar <br> - Allow users to import and export their calander data <br> - More alternate color schemes (like dark mode, ect.) <br> - Add a current date tracker (different from selected day)</td>
+</tr>
+<tr>
+<td><strong>Real Implication</strong></td>
+<td>- We got to use HTML, CSS and JS to build a useful application</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Threats:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Threat</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Deadlines</strong></td>
+<td>- Tight turnaround time for all teams to complete their respective subtasks</td>
+</tr>
+<tr>
+<td><strong>Learning</strong></td>
+<td>- We had a little time to learn how to use JavaScript, a new language for some</td>
+</tr>
+</tbody>
+</table>
+<h2>Our Learnings</h2>
+<p><strong>Applying Labs to a Real-World Application</strong></p>
+<p>Throughout this project, we had the opportunity to apply the concepts and techniques learned in the course labs to a practical, real-world application. Translating theoretical knowledge into a functional web application helped us truly understand how everything works. We also learned how the development process works, and how different members in a team contribute.</p>
+<p><strong>Effective Use of AI Assistance</strong></p>
+<p>During the development process, we learned how to effectively leverage AI assistance tools to enhance our productivity and understand the technologies better.</p>
+<p><strong>Team Work</strong></p>
+<p>We learned how to effectively communicate among ourselves. We divided ourselves into 3 teams, one for HTML, CSS and Javascript each. We learned how to manage and collaborate amongst ourselves and properly use github actions to organize tasks.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Sun May 12 2024 09:09:44 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
