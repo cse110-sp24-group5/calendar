@@ -1,6 +1,7 @@
 name: Generate JSDocs
 
-on: # on all branches
+on:
+  on: # on all branches
   push:
 
 jobs:
@@ -22,3 +23,4 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./out
+Footer
